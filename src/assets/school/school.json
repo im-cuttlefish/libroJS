@@ -1,0 +1,9 @@
+{
+  "name": "school",
+  "scene": {
+    "default": "url(http://127.0.0.1:8080/src/assets/school/morning.jpg)",
+    "evening": "url(http://127.0.0.1:8080/src/assets/school/evening.jpg)",
+    "night": "url(http://127.0.0.1:8080/src/assets/school/night.jpg)",
+    "closed": "url(http://127.0.0.1:8080/src/assets/school/closed.jpg)"
+  }
+}

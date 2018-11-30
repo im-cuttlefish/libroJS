@@ -1,0 +1,10 @@
+{
+  "name": "taro2",
+  "height": 0.7,
+  "face": {
+    "default": "url(http://127.0.0.1:8080/src/assets/taro/normal.png)"
+  },
+  "body": {
+    "default": "url(http://127.0.0.1:8080/src/assets/taro/body.png)"
+  }
+}

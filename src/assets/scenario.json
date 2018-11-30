@@ -1,0 +1,30 @@
+{
+  "config": {
+    "width": 1000,
+    "height": 640
+  },
+  "assets": {
+    "background": ["http://127.0.0.1:8080/src/assets/school/school.json"],
+    "character": [
+      "http://127.0.0.1:8080/src/assets/taro/taro.json",
+      "http://127.0.0.1:8080/src/assets/taro/taro2.json"
+    ],
+    "frame": ["http://127.0.0.1:8080/src/assets/frame/frame.json"]
+  },
+  "scenario": [
+    ["background", "set", ["school", "night"]],
+    ["character", "add", ["taro", "taro2"]],
+    ["character", "face", ["taro", "angry"]],
+    ["text", "make", ["id", "contents"]],
+    ["text", "select", ["id"]],
+    ["text", "frame", ["frame"]],
+    ["text", "position", ["x", 180]],
+    ["text", "position", ["y", 454]],
+    ["text", "write", ["awdefefrr45htrerghthuygyuiuhgufyty\nuihyutbhvgcfdtyugihhgcfrgh5tr"]],
+    ["text", "write", ["awdefefrr45htrerghthuygyuiuhgufyty\nuihyutbhvgcfdtyugihhgcfrgh5tr"]],
+    ["text", "link", ["label"]],
+    ["character", "face", ["taro2", "angry"]],
+    ["system", "label", ["label"]],
+    ["system", "jump", ["http://127.0.0.1:8080/src/assets/scenario.json"]]
+  ]
+}

@@ -1,0 +1,9 @@
+{
+  "name": "frame",
+  "image": "url(http://127.0.0.1:8080/src/assets/frame/frame.png)",
+  "width": 640,
+  "height": 176,
+  "marginLeft": 20,
+  "marginTop": 20,
+  "marginRight": 30
+}
