@@ -15,13 +15,22 @@
     ["background", "set", ["school", "night"]],
     ["character", "add", ["taro", "taro2"]],
     ["character", "face", ["taro", "angry"]],
+
     ["text", "make", ["id", "contents"]],
     ["text", "select", ["id"]],
     ["text", "frame", ["frame"]],
     ["text", "position", ["x", 180]],
     ["text", "position", ["y", 454]],
+
     ["text", "write", ["awdefefrr45htrerghthuygyuiuhgufyty\nuihyutbhvgcfdtyugihhgcfrgh5tr"]],
     ["text", "write", ["awdefefrr45htrerghthuygyuiuhgufyty\nuihyutbhvgcfdtyugihhgcfrgh5tr"]],
+
+    ["text", "make", ["id2", "contents"]],
+    ["text", "select", ["id2"]],
+    ["text", "frame", ["frame"]],
+    ["text", "position", ["x", 180]],
+    ["text", "position", ["y", 200]],
+
     ["text", "link", ["label"]],
     ["character", "face", ["taro2", "angry"]],
     ["system", "label", ["label"]],

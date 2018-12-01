@@ -69,9 +69,7 @@ export class TextManager {
           });
         });
 
-        await new Promise(resolve =>
-          this.display.clickable(() => console.log("aaaa") || resolve())
-        );
+        await new Promise(resolve => this.display.clickable(resolve));
         this.display.unclickable();
 
         break;
