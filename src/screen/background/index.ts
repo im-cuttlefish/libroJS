@@ -38,4 +38,8 @@ export class BackgroundDisplay implements Display {
     this.container.removeChild(prev);
     this.background = next;
   }
+
+  clear() {
+    this.container.removeChild(this.background);
+  }
 }

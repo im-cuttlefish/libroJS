@@ -57,4 +57,12 @@ export class CharacterDisplay implements Display {
     );
     await Animater.reposition(this.width, ...this.character.values());
   }
+
+  clear() {
+    this.character.forEach(character => {
+      this.container.removeChild(character.view);
+    });
+
+    this.character.clear();
+  }
 }

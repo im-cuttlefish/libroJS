@@ -5,25 +5,25 @@ type Command = StoryData["scenario"][number];
 
 export class CharacterManager {
   readonly display: CharacterDisplay;
-  private loader: CharacterLoader;
   private assets: Map<string, CharacterData>;
   private character: Map<string, Character>;
 
-  constructor(story_data: StoryData) {
-    const url = story_data.assets.character;
-    const width = story_data.config.width;
-    const height = story_data.config.height;
-
-    this.loader = new CharacterLoader(...url);
+  constructor(width: number, height: number) {
     this.display = new CharacterDisplay(width, height);
   }
 
-  async init() {
-    this.assets = await this.loader.load();
+  async init(story_data: StoryData) {
+    const url = story_data.assets.character;
+    const loader = new CharacterLoader(...url);
+    this.assets = await loader.load();
     this.character = new Map();
     for (const asset of this.assets.entries()) {
       this.character.set(asset[0], new Character(asset[1]));
     }
+  }
+
+  clear() {
+    this.display.clear();
   }
 
   async update(command: Command) {

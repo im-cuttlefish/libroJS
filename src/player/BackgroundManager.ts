@@ -5,20 +5,16 @@ type Command = StoryData["scenario"][number];
 
 export class BackgroundManager {
   readonly display: BackgroundDisplay;
-  private loader: BackgroundLoader;
   private assets: Map<string, BackgroundData>;
 
-  constructor(story_data: StoryData) {
-    const url = story_data.assets.background;
-    const width = story_data.config.width;
-    const height = story_data.config.height;
-
-    this.loader = new BackgroundLoader(...url);
+  constructor(width: number, height: number) {
     this.display = new BackgroundDisplay(width, height);
   }
 
-  async init() {
-    this.assets = await this.loader.load();
+  async init(story_data: StoryData) {
+    const url = story_data.assets.background;
+    const loader = new BackgroundLoader(...url);
+    this.assets = await loader.load();
   }
 
   async update(command: Command) {
@@ -31,5 +27,9 @@ export class BackgroundManager {
         break;
       }
     }
+  }
+
+  clear() {
+    this.display.clear();
   }
 }

@@ -6,29 +6,31 @@ type Command = StoryData["scenario"][number];
 export class TextManager {
   readonly display: TextDisplay;
   private scenario: Command[];
-  private loader: FrameLoader;
   private assets: Map<string, FrameData>;
   private text: Map<string, Text>;
   private frame: Map<string, TextFrame>;
   private selected: Text;
 
-  constructor(story_data: StoryData) {
-    const url = story_data.assets.frame;
-    const width = story_data.config.width;
-    const height = story_data.config.height;
-
-    this.scenario = story_data.scenario;
-    this.loader = new FrameLoader(...url);
+  constructor(width: number, height: number) {
     this.display = new TextDisplay(width, height);
   }
 
-  async init() {
-    this.assets = await this.loader.load();
+  async init(story_data: StoryData) {
+    const url = story_data.assets.frame;
+    const loader = new FrameLoader(...url);
+    this.assets = await loader.load();
+
+    this.scenario = story_data.scenario;
     this.text = new Map();
     this.frame = new Map();
+
     for (const asset of this.assets.entries()) {
       this.frame.set(asset[0], new TextFrame(asset[1]));
     }
+  }
+
+  clear() {
+    this.display.clear();
   }
 
   async update(command: Command) {
