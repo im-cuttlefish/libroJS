@@ -1,6 +1,6 @@
 import { StoryData, CharacterData } from "../interface";
 import { CharacterLoader } from "../loader";
-import { Character, CharacterDisplay } from "../screen/character";
+import { Character, CharacterDisplay } from "./character";
 type Command = StoryData["scenario"][number];
 
 export class CharacterManager {

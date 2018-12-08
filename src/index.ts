@@ -1,7 +1,8 @@
 import Axios from "axios";
 
 import { DisplayRoot } from "./screen/root";
-import { Player } from "./player";
+import { Player } from "./screen";
+import { initMenu } from "./menu";
 import { StoryData } from "./interface";
 
 (async () => {
@@ -16,6 +17,8 @@ import { StoryData } from "./interface";
 
   const root = new DisplayRoot(width, height);
   const player = new Player(root);
+
+  initMenu();
 
   const render = async (story_data: StoryData) => {
     await player.init(story_data);

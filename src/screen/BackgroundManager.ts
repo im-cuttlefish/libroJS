@@ -1,6 +1,6 @@
 import { StoryData, BackgroundData } from "../interface";
 import { BackgroundLoader } from "../loader";
-import { BackgroundDisplay } from "../screen/background";
+import { BackgroundDisplay } from "./background";
 type Command = StoryData["scenario"][number];
 
 export class BackgroundManager {

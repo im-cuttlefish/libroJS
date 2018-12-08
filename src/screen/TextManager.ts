@@ -1,6 +1,6 @@
 import { StoryData, FrameData } from "../interface";
 import { FrameLoader } from "../loader";
-import { TextDisplay, Text, TextFrame } from "../screen/text";
+import { TextDisplay, Text, TextFrame } from "./text";
 type Command = StoryData["scenario"][number];
 
 export class TextManager {

@@ -13,6 +13,7 @@
   "author": "im_cuttlefish",
   "license": "MIT",
   "devDependencies": {
+    "@types/animejs": "^2.0.1",
     "@types/pixi.js": "^4.8.2",
     "babel-core": "^6.26.3",
     "babel-preset-env": "^1.7.0",
@@ -25,6 +26,7 @@
     "typescript": "^3.1.6"
   },
   "dependencies": {
+    "animejs": "^2.2.0",
     "axios": "^0.18.0",
     "pixi.js": "^4.8.2",
     "ress": "^1.2.2"
