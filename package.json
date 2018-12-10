@@ -28,6 +28,7 @@
   "dependencies": {
     "animejs": "^2.2.0",
     "axios": "^0.18.0",
+    "dexie": "^2.0.4",
     "pixi.js": "^4.8.2",
     "ress": "^1.2.2"
   }

@@ -6,7 +6,6 @@ export const initMenu = () => {
   const close = document.getElementById("close-button") as HTMLElement;
 
   close.style.display = "none";
-
   menu.hide();
 
   open.addEventListener(
