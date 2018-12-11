@@ -1,4 +1,5 @@
 import { Menu } from "./Menu";
+import { h, app } from "hyperapp";
 
 export const initMenu = () => {
   const menu = new Menu();
