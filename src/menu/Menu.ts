@@ -1,42 +1,22 @@
-import anime from "animejs";
+import { app } from "hyperapp";
+import { view } from "./view";
+import { ToggleActions } from "./actions";
 
 export class Menu {
-  private root: HTMLElement;
-  private visible: HTMLElement;
-  private timeline: anime.AnimeTimelineInstance;
-
   constructor() {
-    this.root = document.getElementById("menu") as HTMLElement;
-    this.visible = document.getElementById("visible") as HTMLElement;
+    const root = document.getElementById("menu") as HTMLElement;
+    const actions = {
+      toggle: ToggleActions
+    };
 
-    this.visible.style.opacity = "0";
-    this.visible.style.pointerEvents = "none";
-    this.timeline = anime.timeline();
+    const state = {
+      toggle: { visible: false }
+    };
+
+    app(state, actions, view, root);
   }
 
-  show() {
-    this.visible.style.pointerEvents = "auto";
+  show() {}
 
-    this.timeline.pause();
-    this.timeline = anime.timeline();
-
-    this.timeline.add({
-      targets: this.visible,
-      opacity: 1,
-      duration: 1500
-    });
-  }
-
-  hide() {
-    this.visible.style.pointerEvents = "none";
-
-    this.timeline.pause();
-    this.timeline = anime.timeline();
-
-    this.timeline.add({
-      targets: this.visible,
-      opacity: 0,
-      duration: 1500
-    });
-  }
+  hide() {}
 }

@@ -22,6 +22,7 @@
   top: 0;
   left: 0;
   background: #fff;
+  opacity: 0;
 }
 
 .visible-button {

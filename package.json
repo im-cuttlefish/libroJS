@@ -18,6 +18,7 @@
     "babel-core": "^6.26.3",
     "babel-plugin-transform-h-jsx": "^1.0.0",
     "babel-preset-env": "^1.7.0",
+    "babel-preset-hyperapp": "^2.3.0",
     "http-server": "^0.11.1",
     "parcel-bundler": "^1.10.3",
     "prettier": "^1.15.2",
