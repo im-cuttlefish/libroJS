@@ -1,5 +1,5 @@
 {
-  "name": "novel",
+  "name": "libroJS",
   "version": "0.0.0",
   "description": "for making visual novels",
   "main": "index.html",
@@ -13,12 +13,12 @@
   "author": "im_cuttlefish",
   "license": "MIT",
   "devDependencies": {
+    "@babel/core": "^7.2.0",
+    "@babel/plugin-transform-runtime": "^7.2.0",
+    "@babel/preset-env": "^7.2.0",
+    "@babel/runtime": "^7.2.0",
     "@types/animejs": "^2.0.1",
     "@types/pixi.js": "^4.8.2",
-    "babel-core": "^6.26.3",
-    "babel-plugin-transform-h-jsx": "^1.0.0",
-    "babel-preset-env": "^1.7.0",
-    "babel-preset-hyperapp": "^2.3.0",
     "http-server": "^0.11.1",
     "parcel-bundler": "^1.10.3",
     "prettier": "^1.15.2",
