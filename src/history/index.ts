@@ -1,11 +1,4 @@
-import { Dexie } from "dexie";
-
-interface HistoryData {
-  id?: number;
-  date: string;
-  url: string;
-  index: number;
-}
+import Dexie from "dexie";
 
 class HistoryDatabase extends Dexie {
   histories: Dexie.Table<HistoryData, number>;
@@ -18,7 +11,12 @@ class HistoryDatabase extends Dexie {
   }
 }
 
-const map = new Map();
+export interface HistoryData {
+  id?: number;
+  date: string;
+  name: string;
+  url: string;
+}
 
 export class History {
   private db: HistoryDatabase;
@@ -32,11 +30,8 @@ export class History {
     await this.db.histories.put(data);
   }
 
-  async get(id?: number) {
-    if (id !== undefined) {
-      return await this.db.histories.get(id);
-    }
-    const histories = [];
+  async get() {
+    const histories: HistoryData[] = [];
     this.db.histories.each(data => histories.push(data));
     return histories;
   }

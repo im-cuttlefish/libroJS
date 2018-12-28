@@ -3,7 +3,7 @@ import anime from "animejs";
 
 export const Toggle = ({ visible, toVisible, toHidden }, children) => (
   <div>
-    {visible ? (
+    {visible && (
       <div
         id="visible"
         style={{
@@ -18,8 +18,6 @@ export const Toggle = ({ visible, toVisible, toHidden }, children) => (
       >
         {children}
       </div>
-    ) : (
-      ""
     )}
     <img
       id="open-button"
@@ -28,7 +26,7 @@ export const Toggle = ({ visible, toVisible, toHidden }, children) => (
       style={{
         visibility: visible ? "hidden" : "visible"
       }}
-      onclick={() => toVisible()}
+      onclick={toVisible}
     />
     <img
       id="close-button"
@@ -37,7 +35,7 @@ export const Toggle = ({ visible, toVisible, toHidden }, children) => (
       style={{
         visibility: !visible ? "hidden" : "visible"
       }}
-      onclick={() => toHidden()}
+      onclick={toHidden}
     />
   </div>
 );

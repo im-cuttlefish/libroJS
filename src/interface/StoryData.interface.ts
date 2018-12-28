@@ -1,5 +1,6 @@
 export interface StoryData {
   config: {
+    name: string;
     width: number;
     height: number;
   };
