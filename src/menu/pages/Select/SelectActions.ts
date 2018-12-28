@@ -1,5 +1,3 @@
 export const SelectActions = {
-  selectPage: target => state => {
-    current: "save";
-  }
+  selectPage: target => state => ({ current: "save" })
 };
