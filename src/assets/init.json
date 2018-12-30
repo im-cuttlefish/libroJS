@@ -1,6 +1,6 @@
 {
   "config": {
-    "name": "はじめの局面",
+    "name": "Chapter 1",
     "width": 1000,
     "height": 640
   },
@@ -35,6 +35,6 @@
     ["text", "link", ["label"]],
     ["character", "face", ["taro2", "angry"]],
     ["system", "label", ["label"]],
-    ["system", "jump", ["http://127.0.0.1:8080/src/assets/scenario.json"]]
+    ["system", "jump", ["http://127.0.0.1:8080/src/assets/init.json"]]
   ]
 }

@@ -1,18 +1,23 @@
 import { h } from "hyperapp";
-import { HistoryData } from "../../../history";
+import { SaveState } from "./SaveState.interface";
 
-type argument = {
-  savedata: HistoryData;
-  log: HistoryData[];
+interface argument extends SaveState {
   add: Function;
   remove: Function;
-};
+}
 
 export const Save = ({ savedata, log, add, remove }: argument) => (
   <div>
     <div onclick={() => add(savedata)}>セーブする</div>
-    {log.map(data => (
-      <div onclick={() => remove(data.id)}>{data.name}</div>
-    ))}
+    {console.log(savedata)}
+    {log ? (
+      log.map(data => (
+        <div onclick={() => remove(data.id)}>
+          {data.date}: {data.title}
+        </div>
+      ))
+    ) : (
+      <div>データはありません</div>
+    )}
   </div>
 );

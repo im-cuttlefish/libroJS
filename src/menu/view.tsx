@@ -1,4 +1,5 @@
 import { h } from "hyperapp";
+import picostyle from "picostyle";
 
 import { Toggle } from "./util";
 
@@ -25,7 +26,7 @@ export const view = (state, actions) => (
     ) : state.entry.current === "save" ? (
       <Save
         savedata={state.save.savedata}
-        log={state.save.savedata.log}
+        log={state.save.log}
         add={actions.save.add}
         remove={actions.save.remove}
       />

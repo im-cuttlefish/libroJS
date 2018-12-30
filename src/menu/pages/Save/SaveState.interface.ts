@@ -1,6 +1,6 @@
 import { HistoryData } from "../../../history";
 
 export interface SaveState {
-  savadata: HistoryData;
+  savedata: HistoryData;
   log: HistoryData[];
 }

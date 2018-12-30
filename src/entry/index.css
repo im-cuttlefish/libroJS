@@ -1,0 +1,19 @@
+html {
+  height: 100vh;
+}
+
+body {
+  background: #000;
+}
+
+#stage {
+  position: absolute;
+  width: 100%;
+  top: 50vh;
+  left: 0;
+  transform: translateY(-50%);
+}
+
+#stage canvas {
+  width: 100%;
+}

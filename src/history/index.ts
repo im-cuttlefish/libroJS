@@ -6,7 +6,7 @@ class HistoryDatabase extends Dexie {
   constructor() {
     super("HistoryDatabase");
     this.version(1).stores({
-      histories: "++id, date, url, index"
+      histories: "++id, date, url, title"
     });
   }
 }
@@ -14,8 +14,8 @@ class HistoryDatabase extends Dexie {
 export interface HistoryData {
   id?: number;
   date: string;
-  name: string;
   url: string;
+  title: string;
 }
 
 export class History {
@@ -37,10 +37,7 @@ export class History {
   }
 
   async delete(id: number) {
-    await this.db.histories
-      .where("id")
-      .equals(id)
-      .delete();
+    await this.db.histories.delete(id);
   }
 
   async clear() {

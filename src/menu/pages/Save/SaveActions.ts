@@ -11,7 +11,7 @@ export const SaveActions = {
   remove: (id: number) => async (state, actions) => {
     const history = new History();
     await history.delete(id);
-    state.log = await history.get();
+    state.log = await new History().get();
     actions.update(state);
   },
 
